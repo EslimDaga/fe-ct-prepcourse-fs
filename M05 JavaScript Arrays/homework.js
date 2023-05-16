@@ -192,7 +192,7 @@ function mayorACien(array) {
 }
 
 /* ----------------------------------------------------------------------------------
-💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT  EXTRA CREDIT 💪
+💪 EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT EXTRA CREDIT 💪
 -------------------------------------------------------------------------------------*/
 
 function breakStatement(num) {
@@ -202,6 +202,27 @@ function breakStatement(num) {
   // la ejecución y retornar el string: "Se interrumpió la ejecución".
   // [PISTA]: utiliza el statement 'break'.
   // Tu código:
+  let arr = [];
+
+  let i = 0;
+
+  do {
+    i++;
+    num += 2;
+    arr.push(num);
+  } while (i < 10);
+
+  arr.map((e) => {
+    if (e === 10) {
+      arr = [];
+    }
+  });
+
+  if (arr.length === 0) {
+    return "Se interrumpió la ejecución";
+  }
+
+  return arr;
 }
 
 function continueStatement(num) {
@@ -211,6 +232,21 @@ function continueStatement(num) {
   // se continua con la siguiente iteración.
   // [PISTA]: utiliza el statement 'continue'.
   // Tu código:
+  let arr = [];
+
+  let i = 0;
+
+  do {
+    i++;
+    if (i === 5) continue;
+    num += 2;
+    arr.push(num);
+  } while (i < 10);
+
+  console.log(arr);
+  console.log(arr.length);
+
+  return arr;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
